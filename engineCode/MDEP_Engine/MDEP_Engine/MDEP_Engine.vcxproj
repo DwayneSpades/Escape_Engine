@@ -115,7 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="engineCode\applicationWindow.cpp" />
+    <ClCompile Include="engineCode\gameLoop.cpp" />
+    <ClCompile Include="engineCode\gameWindow.cpp" />
     <ClCompile Include="engineCode\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engineCode\applicationWindow.h" />
+    <ClInclude Include="engineCode\gameLoop.h" />
+    <ClInclude Include="engineCode\gameWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

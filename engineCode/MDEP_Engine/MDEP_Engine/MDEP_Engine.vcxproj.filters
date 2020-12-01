@@ -16,10 +16,36 @@
     <Filter Include="Source Files\data structure">
       <UniqueIdentifier>{6a303ba1-cb10-4b6a-98e6-4d36f60eaac6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gameLoop">
+      <UniqueIdentifier>{f1d7aa39-b89b-4fc9-a46c-d2a33ebd5d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\windowsFunctionality">
+      <UniqueIdentifier>{2ea83a7e-7df7-4399-b2f3-43f1ccfaa416}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engineCode\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="engineCode\gameLoop.cpp">
+      <Filter>Source Files\gameLoop</Filter>
+    </ClCompile>
+    <ClCompile Include="engineCode\applicationWindow.cpp">
+      <Filter>Source Files\windowsFunctionality</Filter>
+    </ClCompile>
+    <ClCompile Include="engineCode\gameWindow.cpp">
+      <Filter>Source Files\windowsFunctionality</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engineCode\gameLoop.h">
+      <Filter>Source Files\gameLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="engineCode\applicationWindow.h">
+      <Filter>Source Files\windowsFunctionality</Filter>
+    </ClInclude>
+    <ClInclude Include="engineCode\gameWindow.h">
+      <Filter>Source Files\windowsFunctionality</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
