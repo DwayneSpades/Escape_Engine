@@ -1,0 +1,10 @@
+﻿  applicationWindow.cpp
+  gameLoop.cpp
+  gameWindow.cpp
+c:\users\preston adams\documents\game dev\c++\winter 2020\practengine\enginecode\mdep_engine\mdep_engine\enginecode\gamewindow.cpp(42): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'WPARAM'
+  c:\users\preston adams\documents\game dev\c++\winter 2020\practengine\enginecode\mdep_engine\mdep_engine\enginecode\gamewindow.cpp(42): note: consider using '%llx' in the format string
+  c:\users\preston adams\documents\game dev\c++\winter 2020\practengine\enginecode\mdep_engine\mdep_engine\enginecode\gamewindow.cpp(42): note: consider using '%Ix' in the format string
+  c:\users\preston adams\documents\game dev\c++\winter 2020\practengine\enginecode\mdep_engine\mdep_engine\enginecode\gamewindow.cpp(42): note: consider using '%I64x' in the format string
+  main.cpp
+  Generating Code...
+  MDEP_Engine.vcxproj -> C:\Users\Preston Adams\Documents\Game Dev\C++\Winter 2020\practEngine\engineCode\MDEP_Engine\x64\Debug\MDEP_Engine.exe
