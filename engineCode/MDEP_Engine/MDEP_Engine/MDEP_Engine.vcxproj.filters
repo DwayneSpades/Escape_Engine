@@ -22,11 +22,11 @@
     <Filter Include="Source Files\windowsFunctionality">
       <UniqueIdentifier>{2ea83a7e-7df7-4399-b2f3-43f1ccfaa416}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gameSystems">
+      <UniqueIdentifier>{80f92bd8-3df5-4b12-b5dd-e2e1fe68d297}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="engineCode\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="engineCode\gameLoop.cpp">
       <Filter>Source Files\gameLoop</Filter>
     </ClCompile>
@@ -34,6 +34,9 @@
       <Filter>Source Files\windowsFunctionality</Filter>
     </ClCompile>
     <ClCompile Include="engineCode\gameWindow.cpp">
+      <Filter>Source Files\windowsFunctionality</Filter>
+    </ClCompile>
+    <ClCompile Include="engineCode\main.cpp">
       <Filter>Source Files\windowsFunctionality</Filter>
     </ClCompile>
   </ItemGroup>
