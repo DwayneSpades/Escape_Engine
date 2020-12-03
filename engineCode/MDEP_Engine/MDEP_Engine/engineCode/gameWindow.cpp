@@ -5,9 +5,6 @@ gameWindow* instance = nullptr;
 LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 
-	//char msg[32];
-	bool wasHandled = false;
-
 	switch (uMsg)
 	{
 	case WM_CREATE:
@@ -19,13 +16,20 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPa
 	case WM_CLOSE:
 	{
 		//what to do when closing the program
-		printf("Begginning to exit application\n");
+		printf("Beginning to exit application\n");
+
+		//shutdown confirmation: enable for release build
+		//-----------------------------------------------
+
+		/*
 		if (MessageBox(hwnd, "Really quit?", "My Application", MB_OKCANCEL) == IDOK)
 		{
 			instance->onDestroy();
+			return 0;
 		}
-			return 0;	
-		//break;
+		*/
+		instance->onDestroy();
+		break;
 	}
 	case WM_KEYDOWN:
 	{
@@ -47,11 +51,15 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPa
 		printf("WM_CHAR: %c\n", (char)wParam);
 		break;
 	}
-	case WM_DESTROY:
+	case WM_SIZE:
 	{
-		PostQuitMessage(0);
-		break;
+		UINT width = LOWORD(lParam);
+		UINT height = HIWORD(lParam);
+		instance->OnResize(width, height);
+		instance->OnRender();
+		ValidateRect(hwnd, NULL);
 	}
+	break;
 	case WM_DISPLAYCHANGE:
 	{
 		InvalidateRect(hwnd, NULL, FALSE);
@@ -59,16 +67,16 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPa
 	break;
 	case WM_PAINT:
 	{
+
 		instance->OnRender();
 		ValidateRect(hwnd, NULL);
 	}
-	case WM_SIZE:
-	{
-		UINT width = LOWORD(lParam);
-		UINT height = HIWORD(lParam);
-		instance->OnResize(width, height);
-	}
 	break;
+	case WM_DESTROY:
+	{
+		PostQuitMessage(0);
+		break;
+	}
 	}
 	return DefWindowProc(hwnd, uMsg, wParam, lParam);
 
@@ -95,14 +103,20 @@ HRESULT gameWindow::OnRender()
 
 	if (SUCCEEDED(hr))
 	{
+
 		m_pRenderTarget->BeginDraw();
+
 		m_pRenderTarget->SetTransform(D2D1::Matrix3x2F::Identity());
-		m_pRenderTarget->Clear(D2D1::ColorF(D2D1::ColorF::White));
+		m_pRenderTarget->Clear(D2D1::ColorF(D2D1::ColorF::Black));
+		
+
 		D2D1_SIZE_F rtSize = m_pRenderTarget->GetSize();
 
 		// Draw a grid background.
 		int width = static_cast<int>(rtSize.width);
 		int height = static_cast<int>(rtSize.height);
+
+		
 
 		//Horizontal Lines
 		for (int x = 0; x < width; x += 10)
@@ -114,11 +128,6 @@ HRESULT gameWindow::OnRender()
 				1.5f
 			);
 		}
-
-		D2D1_ELLIPSE e = D2D1::Ellipse(
-			D2D1::Point2F(rtSize.width/2, rtSize.height / 2), rtSize.width/2,rtSize.height/2 );
-
-		m_pRenderTarget->FillEllipse(&e,m_pCornflowerBlueBrush);
 
 		//Vertical Lines
 		
@@ -134,6 +143,12 @@ HRESULT gameWindow::OnRender()
 		
 		//draw the rectangles
 
+		//draw a circle in the middle of the screen
+		m_pRenderTarget->FillEllipse(
+			D2D1::Ellipse(
+				D2D1::Point2F(rtSize.width / 2, rtSize.height / 2),
+				rtSize.width / 2, rtSize.height / 2),
+			m_pCornflowerBlueBrush);
 
 		hr = m_pRenderTarget->EndDraw();
 
@@ -157,7 +172,9 @@ void gameWindow::OnResize(UINT width, UINT height)
 			// error here, because the error will be returned again
 			// the next time EndDraw is called.
 		m_pRenderTarget->Resize(D2D1::SizeU(width, height));
+		//printf("scaling\n");
 	}
+	
 }
 
 HRESULT gameWindow::CreateDeviceIndependentResources()
@@ -179,6 +196,7 @@ HRESULT gameWindow::CreateDeviceResources()
 		RECT rc;
 		GetClientRect(m_hwnd, &rc);
 
+		//get size of screen
 		D2D1_SIZE_U size = D2D1::SizeU(
 			rc.right - rc.left,
 			rc.bottom - rc.top

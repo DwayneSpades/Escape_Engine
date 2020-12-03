@@ -5,11 +5,10 @@
 #include <stdio.h>
 #include <iostream>
 
-
+//required to use the Diret 2D API
 #include <d2d1.h>
-
 #pragma comment(lib, "d2d1")
-
+//TASK: convert into a singleton
 
 class gameWindow
 {
