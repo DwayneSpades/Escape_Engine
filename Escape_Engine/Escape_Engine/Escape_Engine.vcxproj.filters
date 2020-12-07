@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\EngineCode">
+      <UniqueIdentifier>{dba4f9b5-3d7d-49e9-9359-983ca8d3ab8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameCode">
+      <UniqueIdentifier>{a9979c4f-4ddd-4c05-a96f-87f4eadd78f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\Audio">
+      <UniqueIdentifier>{0de06487-6aa6-4837-8926-1605fc77fe06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\renderingEngine">
+      <UniqueIdentifier>{613c7cb9-327b-4fa5-a096-2afb4df01939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\gameObjectInterface">
+      <UniqueIdentifier>{dc52aab6-c04e-4e61-871f-5fae6adf5682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\windowManager">
+      <UniqueIdentifier>{5bd6f7d9-0245-4b53-ab90-f5e2b5bf9969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\menuInterface">
+      <UniqueIdentifier>{2a6a18c4-f091-49a7-bc87-f6eecee18f6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\collisionSystem">
+      <UniqueIdentifier>{ebb46a2b-e315-41d9-be21-433f9b559d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\renderingEngine\sceneManager">
+      <UniqueIdentifier>{d1d9fc6f-ac02-407a-aa73-1de1e66868f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\renderingEngine\modelParser">
+      <UniqueIdentifier>{c74043b5-be3f-4bce-813a-416ba9a8cc1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\renderingEngine\modelInterface">
+      <UniqueIdentifier>{e1165565-cd9c-4b39-b0bc-63cdacd46c70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\userInput">
+      <UniqueIdentifier>{a862e19e-7a30-43b8-b946-84c1d06166c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\main">
+      <UniqueIdentifier>{66a1f285-f941-47eb-b121-baed656270a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\renderingEngine\2DRenderingTools">
+      <UniqueIdentifier>{bbe3373e-f79f-470f-9712-fcd0f2dd89f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCode\renderingEngine\3DRenderingTools">
+      <UniqueIdentifier>{a6347524-2067-4a87-bba3-e5989882912d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine components\main.cpp">
+      <Filter>Source Files\main</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\applicationWindow.cpp">
+      <Filter>Source Files\EngineCode\windowManager</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\gameWindow.cpp">
+      <Filter>Source Files\EngineCode\windowManager</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\windowManager.cpp">
+      <Filter>Source Files\EngineCode\windowManager</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\EE2DTools.cpp">
+      <Filter>Source Files\EngineCode\renderingEngine\2DRenderingTools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine components\applicationWindow.h">
+      <Filter>Source Files\EngineCode\windowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\gameWindow.h">
+      <Filter>Source Files\EngineCode\windowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\windowManager.h">
+      <Filter>Source Files\EngineCode\windowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\EE2DTools.h">
+      <Filter>Source Files\EngineCode\renderingEngine\2DRenderingTools</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
