@@ -1,5 +1,8 @@
 #include "gameWindow.h"
 #include "EE2DTools.h"
+#include "dx11Base.h"
+
+ //close directx and clean memeory
 
 LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -136,7 +139,8 @@ bool gameWindow::_initialize()
 	ShowWindow(m_hwnd,SW_SHOWNORMAL);
 	UpdateWindow(m_hwnd);
 
-	
+	//initialize Direct3D
+	dx11Base::InitD3D(m_hwnd);
 
 	//set flag to true 
 	m_is_run = true;
@@ -181,8 +185,8 @@ void gameWindow::_onDestroy()
 {
 	//release rendering resources
 	EE2DTools::Terminate();
-
-
+	//cleanup DirectX and COM
+	dx11Base::CleanD3D();
 
 	//application window is nolonger running
 	m_is_run = false;

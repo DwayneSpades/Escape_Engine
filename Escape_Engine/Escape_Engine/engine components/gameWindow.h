@@ -10,6 +10,8 @@
 #pragma comment(lib, "d2d1")
 //TASK: convert into a singleton
 
+
+
 class gameWindow
 {
 

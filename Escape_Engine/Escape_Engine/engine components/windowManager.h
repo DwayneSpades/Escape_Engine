@@ -1,4 +1,5 @@
 #pragma once
+/*
 class windowManager
 {
 
@@ -39,7 +40,7 @@ public:
 	static void onCreate(){};
 	static void onUpdate(){};
 	static void onDestroy(){};
-	*/
+	
 
 	// Draw content.
 	static HRESULT OnRender() { _get()._OnRender(); };
@@ -96,3 +97,4 @@ protected:
 
 };
 
+*/

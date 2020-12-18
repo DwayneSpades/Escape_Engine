@@ -82,6 +82,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,6 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="engine components\dx11Base.cpp" />
+    <ClCompile Include="engine components\errorLogger.cpp" />
+    <ClCompile Include="engine components\stringConverter.cpp" />
+    <ClCompile Include="engine components\vector2F.cpp" />
     <ClCompile Include="engine components\applicationWindow.cpp" />
     <ClCompile Include="engine components\EE2DTools.cpp" />
     <ClCompile Include="engine components\gameWindow.cpp" />
@@ -134,8 +139,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine components\applicationWindow.h" />
+    <ClInclude Include="engine components\dx11Base.h" />
     <ClInclude Include="engine components\EE2DTools.h" />
+    <ClInclude Include="engine components\errorLogger.h" />
     <ClInclude Include="engine components\gameWindow.h" />
+    <ClInclude Include="engine components\globals.h" />
+    <ClInclude Include="engine components\stringConverter.h" />
+    <ClInclude Include="engine components\vector2F.h" />
     <ClInclude Include="engine components\windowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

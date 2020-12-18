@@ -8,6 +8,9 @@
 #pragma comment(lib, "d2d1")
 //TASK: convert into a singleton
 
+//forward declaration
+
+
 class EE2DTools
 {
 
@@ -39,7 +42,7 @@ public:
 	static void onResize(UINT width, UINT height) { _get()._onResize(width,height); };
 	static void onRender() { _get()._onRender(); };
 	static D2D1_SIZE_F getScreenSize() { return _get()._getScreenSize(); };
-
+	static void circle();
 protected:
 
 	//default constructor
@@ -62,6 +65,8 @@ protected:
 	void _onResize(UINT width, UINT height);
 
 	void _Terminate();
+
+	void _circle();
 	//HWND m_hwnd = nullptr;
 
 	//direct 2D entrypoint

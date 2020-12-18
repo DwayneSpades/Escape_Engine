@@ -58,6 +58,9 @@
     <Filter Include="Source Files\EngineCode\renderingEngine\3DRenderingTools">
       <UniqueIdentifier>{a6347524-2067-4a87-bba3-e5989882912d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\EngineCode\ErrorHandling">
+      <UniqueIdentifier>{c34ff24b-929c-4bb1-ac0b-f5cc9cbe3595}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine components\main.cpp">
@@ -75,6 +78,18 @@
     <ClCompile Include="engine components\EE2DTools.cpp">
       <Filter>Source Files\EngineCode\renderingEngine\2DRenderingTools</Filter>
     </ClCompile>
+    <ClCompile Include="engine components\vector2F.cpp">
+      <Filter>Source Files\EngineCode\renderingEngine\2DRenderingTools</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\stringConverter.cpp">
+      <Filter>Source Files\EngineCode\ErrorHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\errorLogger.cpp">
+      <Filter>Source Files\EngineCode\ErrorHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="engine components\dx11Base.cpp">
+      <Filter>Source Files\EngineCode\renderingEngine\3DRenderingTools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine components\applicationWindow.h">
@@ -88,6 +103,21 @@
     </ClInclude>
     <ClInclude Include="engine components\EE2DTools.h">
       <Filter>Source Files\EngineCode\renderingEngine\2DRenderingTools</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\vector2F.h">
+      <Filter>Source Files\EngineCode\renderingEngine\2DRenderingTools</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\stringConverter.h">
+      <Filter>Source Files\EngineCode\ErrorHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\errorLogger.h">
+      <Filter>Source Files\EngineCode\ErrorHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\dx11Base.h">
+      <Filter>Source Files\EngineCode\renderingEngine\3DRenderingTools</Filter>
+    </ClInclude>
+    <ClInclude Include="engine components\globals.h">
+      <Filter>Source Files\EngineCode\renderingEngine\3DRenderingTools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

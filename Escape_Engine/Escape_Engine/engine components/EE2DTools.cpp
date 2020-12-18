@@ -148,3 +148,4 @@ HRESULT EE2DTools::_onRender()
 
 	return hr;
 }
+
